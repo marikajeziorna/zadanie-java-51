@@ -1,4 +1,4 @@
-public class Processor extends Computer {
+public class Processor extends Product implements Parameters {
 /*
 * takowanie np. 3000MHz
 */
@@ -7,26 +7,18 @@ public class Processor extends Computer {
     private final int TEMP_WHEN_TAKOWANIE_INCREASE_ON_EACH_100MHZ = 10;
 
 
-    public Processor(int regularTemp, int maxTemp, String producer, String serialNumber, int takowanie, int ram, int takowanie1, int powerTakowanie) {
-        super(regularTemp, maxTemp, producer, serialNumber, takowanie, ram);
-        this.takowanie = takowanie1;
-        this.powerTakowanie = powerTakowanie;
-    }
-
-    public int getTakowanie() {
-        return takowanie;
-    }
-
-    public void setTakowanie(int takowanie) {
+    public Processor(String producer, String serialNumber, String modelName, int takowanie, int powerTakowanie) {
+        super(producer, serialNumber, modelName);
         this.takowanie = takowanie;
+        this.powerTakowanie = powerTakowanie;
     }
 
     @Override
     public void power() {
       takowanie += powerTakowanie;
-        super.power();
     }
 
+    @Override
     public void isTempIncrease() {
         takowanie += powerTakowanie * TEMP_WHEN_TAKOWANIE_INCREASE_ON_EACH_100MHZ;
 

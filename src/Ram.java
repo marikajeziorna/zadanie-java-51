@@ -1,27 +1,17 @@
-public class Ram extends Computer {
+public class Ram extends Product implements Parameters {
     private int ram;
     private int powerRam;
     private final int TEMP_WHEN_RAM_INCREASE_ON_EACH_100MHZ = 15;
 
-
-    public Ram(int regularTemp, int maxTemp, String producer, String serialNumber, int takowanie, int ram, int ram1, int powerRam) {
-        super(regularTemp, maxTemp, producer, serialNumber, takowanie, ram);
-        this.ram = ram1;
-        this.powerRam = powerRam;
-    }
-
-    public int getRam() {
-        return ram;
-    }
-
-    public void setRam(int ram) {
+    public Ram(String producer, String serialNumber, String modelName, int ram, int powerRam) {
+        super(producer, serialNumber, modelName);
         this.ram = ram;
+        this.powerRam = powerRam;
     }
 
     @Override
     public void power() {
         ram += powerRam;
-        super.power();
     }
 
     @Override

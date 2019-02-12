@@ -1,15 +1,16 @@
-public class Computer {
-    private String producer;
-    private String serialNumber;
+public class Computer extends Product{
+    private Processor processor;
+    private Ram ram;
+    private HardDisk hardDisk;
 
-    public Computer(int regularTemp, int maxTemp, String producer, String serialNumber, int takowanie, int ram) {
-        super();
-        this.producer = producer;
-        this.serialNumber = serialNumber;
+    public Computer(String producer, String serialNumber, String modelName, int takowanie, int ram, int capacity) {
+        super(producer, serialNumber, modelName);
+
+
+
     }
 
-    public void power(){
-    }
+
 
 
 }
