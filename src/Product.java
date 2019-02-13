@@ -1,4 +1,5 @@
 abstract class Product {
+
     private String producer;
     private String serialNumber;
     private String modelName;

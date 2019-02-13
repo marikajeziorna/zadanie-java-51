@@ -1,25 +1,22 @@
 public class Processor extends Product implements Parameters {
-/*
-* takowanie np. 3000MHz
-*/
-    private int takowanie;
-    private final int TEMP_WHEN_TAKOWANIE_INCREASE_ON_EACH_100MHZ = 10;
-    int powerTakowanie;
+
+    /**
+     * taktowanie np. 3000MHz
+     */
+
+    private int timing;
+    private int powerTiming;
 
 
-    public Processor(String producer, String serialNumber, String modelName, int takowanie) {
+    public Processor(String producer, String serialNumber, String modelName, int timing) {
         super(producer, serialNumber, modelName);
-        this.takowanie = takowanie;
+        this.timing = timing;
     }
+
 
     @Override
-    public void power() {
-      takowanie += powerTakowanie;
-    }
-
-    @Override
-    public void isTempIncrease() {
-        takowanie += powerTakowanie * TEMP_WHEN_TAKOWANIE_INCREASE_ON_EACH_100MHZ;
+    public void setCurrentMHZ() {
 
     }
+
 }
