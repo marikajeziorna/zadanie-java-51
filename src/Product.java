@@ -9,4 +9,5 @@ abstract class Product {
         this.serialNumber = serialNumber;
         this.modelName = modelName;
     }
+
 }
