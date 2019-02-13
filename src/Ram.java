@@ -5,7 +5,7 @@ public class Ram extends Mhz {
     public int maxOverheat = 30;
 
     public Ram(String producer, String serialNumber, String modelName, int ram, int defaultMHZ) {
-        super(producer, serialNumber, modelName, defaultMHZ);
+        super(producer, serialNumber, modelName, defaultMHZ, 10, 30);
         this.ram = ram;
     }
 }

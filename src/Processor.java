@@ -7,6 +7,6 @@ public class Processor extends Mhz {
     public int maxOverheat = 30;
 
     public Processor(String producer, String serialNumber, String modelName, int defaultMHZ) {
-        super(producer, serialNumber, modelName, defaultMHZ);
+        super(producer, serialNumber, modelName, defaultMHZ, 15, 30);
     }
 }

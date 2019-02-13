@@ -6,9 +6,9 @@ public class TestClass {
         HardDisk hardDisk = new HardDisk("KLP", "HJK789", "KLK", 120);
         Computer computer = new Computer("Apple", "TYUI9876hjk", "HKLJK", processor, ram, hardDisk);
 
-        processor.setCurrentMHZ(5000);
+        processor.setCurrentMHZ(1000);
+        ram.setCurrentMHZ(1000);
+
         ram.setCurrentMHZ(5000);
-
-
     }
 }
