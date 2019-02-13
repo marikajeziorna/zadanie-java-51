@@ -5,16 +5,13 @@ public interface Parameters {
 //    static final int;
 //    static final int MAX_TEMP = 40;
 
-//    static int defaultMHZ;
-//    static int currentMHZ;
-//    static int overheatBy100MHZ;
-//    static int maxOverheat;
+    int DEFAULT_MHZ = 2500;
+    int OVER_HEAT_BY100MHZ = 10;
+    int MAX_OVER_HEAT = 20;
 
 
-    void setCurrentMHZ() throws ToHighTempException;
+    void setCurrentMHZ(int newCurrentMHZ) throws ToHighTempException;
 
-    void isTempIncrease();
 
-    void power();
 }
 
