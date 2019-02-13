@@ -1,23 +1,11 @@
-public class Ram extends Product {
+public class Ram extends Mhz {
 
-    private int ram;
-    static int defaultMHZ;
-    static int currentMHZ;
-    static int overheatBy100MHZ;
-    static int maxOverheat;
+    public int ram;
+    public int overheatBy100MHZ = 10;
+    public int maxOverheat = 30;
 
-    public Ram(String producer, String serialNumber, String modelName, int ram) {
-        super(producer, serialNumber, modelName);
+    public Ram(String producer, String serialNumber, String modelName, int ram, int defaultMHZ) {
+        super(producer, serialNumber, modelName, defaultMHZ);
         this.ram = ram;
-    }
-
-
-    public void setCurrentMHZ(int newCurrentMHZ) throws ToHighTempException {
-        int calulateOverheat = (currentMHZ - defaultMHZ) / 100 * overheatBy100MHZ;
-        if (overheatBy100MHZ > maxOverheat) {
-            throw new ToHighTempException();
-        } else {
-            this.currentMHZ = newCurrentMHZ;
-        }
     }
 }

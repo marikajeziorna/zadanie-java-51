@@ -1,26 +1,12 @@
-public class Processor extends Product {
+public class Processor extends Mhz {
 
     /**
      * taktowanie np. 3000MHz
      */
+    public int overheatBy100MHZ = 15;
+    public int maxOverheat = 30;
 
-    private int timing;
-    static int defaultMHZ;
-    static int currentMHZ;
-    static int overheatBy100MHZ;
-    static int maxOverheat;
-
-
-    public Processor(String producer, String serialNumber, String modelName, int timing) {
-        super(producer, serialNumber, modelName);
-    }
-
-    public void setCurrentMHZ(int newCurrentMHZ) throws ToHighTempException {
-        int calulateOverheat = (currentMHZ - defaultMHZ) / 100 * overheatBy100MHZ;
-        if (overheatBy100MHZ > maxOverheat) {
-            throw new ToHighTempException();
-        } else {
-            this.currentMHZ = newCurrentMHZ;
-        }
+    public Processor(String producer, String serialNumber, String modelName, int defaultMHZ) {
+        super(producer, serialNumber, modelName, defaultMHZ);
     }
 }
