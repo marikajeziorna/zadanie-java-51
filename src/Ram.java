@@ -8,4 +8,9 @@ public class Ram extends Mhz {
         super(producer, serialNumber, modelName, defaultMHZ, 10, 30);
         this.ram = ram;
     }
+
+    @Override
+    public String toString() {
+        return "Ram parameters: defaultMHZ: " + defaultMHZ + ", currentMHZ: " + currentMHZ + ", overheatBy100MHZ: " + overheatBy100MHZ + ", maxOverheat: " + maxOverheat;
+    }
 }

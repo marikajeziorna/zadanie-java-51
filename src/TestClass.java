@@ -6,9 +6,21 @@ public class TestClass {
         HardDisk hardDisk = new HardDisk("KLP", "HJK789", "KLK", 120);
         Computer computer = new Computer("Apple", "TYUI9876hjk", "HKLJK", processor, ram, hardDisk);
 
+        System.out.println(computer.toString() + "\n");
         processor.setCurrentMHZ(1000);
+        System.out.println(processor.toString() + "\n");
         ram.setCurrentMHZ(1000);
+        System.out.println(ram.toString() + "\n");
+        hardDisk.setCapacity(2000);
+        System.out.println(hardDisk.toString() + "\n");
+
+/**
+ * Exception in thread:
+ */
+        processor.setCurrentMHZ(5000);
+        processor.toString();
 
         ram.setCurrentMHZ(5000);
+        ram.toString();
     }
 }

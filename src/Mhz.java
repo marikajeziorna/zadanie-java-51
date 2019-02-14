@@ -19,7 +19,6 @@ abstract public class Mhz extends Product {
             throw new ToHighTempException();
         } else {
             this.currentMHZ = newCurrentMHZ;
-            System.out.print("Current MHZ: " + this.currentMHZ );
         }
     }
 

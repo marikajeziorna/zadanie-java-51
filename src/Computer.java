@@ -11,6 +11,10 @@ public class Computer extends Product{
         this.processor = processor;
     }
 
+    @Override
+    public String toString() {
+        return "Computer parameters: " + processor + ", " + ram + ", " + hardDisk;
+    }
 }
 
 
