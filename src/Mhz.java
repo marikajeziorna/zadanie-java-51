@@ -1,9 +1,9 @@
 abstract public class Mhz extends Product {
 
-    public int defaultMHZ;
-    public int currentMHZ;
-    public int overheatBy100MHZ;
-    public int maxOverheat;
+    protected int defaultMHZ;
+    protected int currentMHZ;
+    protected int overheatBy100MHZ;
+    protected int maxOverheat;
 
     public Mhz(String producer, String serialNumber, String modelName, int defaultMHZ, int overheatBy100MHZ, int maxOverheat) {
         super(producer, serialNumber, modelName);
